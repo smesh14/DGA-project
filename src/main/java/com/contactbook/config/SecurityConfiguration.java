@@ -34,6 +34,7 @@ public class SecurityConfiguration {
                 .requestMatchers(
                         "/api/user/create",
                         "/api/user/login",
+                        "/api/user/load/**",
                         "/login",
                         "/v2/api-docs",
                         "/v3/api-docs",
