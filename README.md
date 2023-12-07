@@ -1,6 +1,6 @@
 # DGA-project
 
-This is a RESTFful User contact Service built using Spring Boot. It includes token-based authorization, a Dockerized h2 database and various API endpoints for managing users.
+This is a RESTFUL User contact Service built using Spring Boot. It includes token-based authorization, a Dockerized h2 database and various API endpoints for managing users.
 
 ## System Requirements
 
@@ -20,7 +20,12 @@ This is a RESTFful User contact Service built using Spring Boot. It includes tok
    ```
 
 2. Build and run Docker images:
-    DOCKER_BUILDKIT=0 docker-compose up --build
+      ```bash
+   ./script/docker-build-and-run.sh  # On Unix-based systems
+   ./script/docker-build-and-run.bat  # On Windows systemsrun file docker-build-and-run.bat or docker-build-and-run.sh 
+   ```
+
+
 5. The application should now be running. You can access it at `http://localhost:8080`.
 
 ## API Documentation
