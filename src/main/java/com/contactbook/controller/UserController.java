@@ -24,17 +24,17 @@ public class UserController {
 
 
     @PostMapping("/user/create")
-    public ResponseEntity<UserResponse> register(@RequestBody UserRequest userRequest) {
+    public ResponseEntity<UserResponse> register(@RequestBody @Valid UserRequest userRequest) {
         return ResponseEntity.ok(userService.registerUser(userRequest));
     }
 
     @PostMapping("/user/add/contact/{name}")
-    public ResponseEntity<ContactResponse> addContact(@RequestBody ContactRequest contactRequest, @PathVariable String name) {
+    public ResponseEntity<ContactResponse> addContact(@RequestBody @Valid ContactRequest contactRequest, @PathVariable String name) {
         return ResponseEntity.ok(userService.addContact(contactRequest,name));
     }
 
     @PutMapping("/user/update/contact/{userName}/{contactName}")
-    public ResponseEntity<ContactResponse> updateContact(@RequestBody ContactRequest contactRequest,@PathVariable String userName,@PathVariable String contactName) {
+    public ResponseEntity<ContactResponse> updateContact(@RequestBody @Valid ContactRequest contactRequest,@PathVariable String userName,@PathVariable String contactName) {
         return ResponseEntity.ok(userService.updateContact(contactRequest,userName,contactName));
     }
 
