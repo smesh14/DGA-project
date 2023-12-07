@@ -5,11 +5,10 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 
-@SuppressWarnings("NewClassNamingConvention")
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = {"src/test/resources/features"},
-        plugin = {"pretty"},
+        plugin = {"pretty"}, dryRun = true,
         glue = {"com/contactbook/cucumberglue"})
-public class CucumberTestRunnerCase {
+public class CucumberTestRunnerIT {
 }
