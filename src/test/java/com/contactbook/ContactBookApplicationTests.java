@@ -1,4 +1,15 @@
 package com.contactbook;
 
-public class ContactBookApplicationTest {
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+
+@SpringBootTest
+public class ContactBookApplicationTests {
+
+
+
+    @Test
+    public void contextLoads() {
+    }
 }

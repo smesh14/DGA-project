@@ -3,14 +3,12 @@ package com.contactbook.entity;
 
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @AllArgsConstructor
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 public class ContactRequest {
     private String name;
